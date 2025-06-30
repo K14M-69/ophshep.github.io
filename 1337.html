@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKED BY BD CYBER FORCE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            color: lime;
+            background-color: black;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: glowColor 1s infinite alternate;
+        }
+
+        @keyframes glowColor {
+            from { text-shadow: 0 0 10px lime, 0 0 20px lime; }
+            to { text-shadow: 0 0 20px cyan, 0 0 30px cyan; }
+        }
+
+        #video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.5; /* Increased opacity for better visibility */
+        }
+
+        #profile {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid lime;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 0 20px lime;
+        }
+
+        #profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            animation: blink 1s infinite alternate;
+        }
+
+        p {
+            font-size: 1.3rem;
+            margin: 8px 0;
+            text-shadow: 0 0 5px lime;
+        }
+
+        .credit {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            font-size: 0.9rem;
+            color: gray;
+        }
+
+        @keyframes blink {
+            0% { color: lime; }
+            100% { color: cyan; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="video-bg">
+        <source src="https://envs.sh/u2J.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Profile Image -->
+    <div id="profile">
+        <img src="https://envs.sh/u27.jpg" alt="BD CYBER FORCE">
+    </div>
+
+    <!-- Headline -->
+    <h1>HACKED BY BD CYBER FORCE</h1>
+
+    <!-- Messages -->
+    <p>System Security Compromised</p>
+    <p>All Sensitive Data Accessed</p>
+    <p>Firewalls Neutralized</p>
+    <p>We Are Watching You</p>
+
+    <!-- Background Audio -->
+    <audio autoplay loop id="bg-audio">
+        <source src="https://envs.sh/uuj.mp4" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="credit">© 2025 BD CYBER FORCE</div>
+
+    <!-- Scripts -->
+    <script>
+        // Auto-play audio with promise handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('bg-audio');
+            const playPromise = audio.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    // Show play button if autoplay fails
+                    const playButton = document.createElement('button');
+                    playButton.textContent = 'Click to Play Audio';
+                    playButton.style.position = 'fixed';
+                    playButton.style.top = '20px';
+                    playButton.style.left = '50%';
+                    playButton.style.transform = 'translateX(-50%)';
+                    playButton.style.padding = '10px 20px';
+                    playButton.style.background = 'black';
+                    playButton.style.color = 'lime';
+                    playButton.style.border = '2px solid lime';
+                    playButton.style.cursor = 'pointer';
+                    playButton.style.zIndex = '1000';
+                    
+                    playButton.addEventListener('click', () => {
+                        audio.play();
+                        playButton.remove();
+                    });
+                    
+                    document.body.appendChild(playButton);
+                });
+            }
+        });
+
+        // Improved blinking effect using CSS animation
+    </script>
+</body>
+</html>
